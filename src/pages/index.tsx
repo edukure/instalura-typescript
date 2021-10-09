@@ -1,8 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Title = styled.h1`
-  color: red;
-  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary.main.color};
+  ${({ theme }) =>
+    css`
+      ${theme.typographyVariants.title}
+    `}
 `;
 
 export default function Home() {
