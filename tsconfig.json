@@ -18,7 +18,17 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@config": ["config/index.ts"],
+      "@components/*": ["src/components/*"],
+      "@test-utils": ["src/infra/tests/test-utils.tsx"],
+      "@infra/*": ["src/infra/*"],
+      "@services/*": ["src/services/*"],
+      "@theme": ["src/theme/index.ts"],
+      "@theme/*": ["src/theme/*"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
